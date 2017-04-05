@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../js/navigator.js"></script>
+</head>
+<body>
+<div id="Chrome" style="display: none">
+    <p>userAgent: <span id="userAgent"></span></p>
+
+    <p>appVersion: <span id="appVersion"></span></p>
+</div>
+<div id="Firefox" style="display: none">
+
+    <p>appName: <span id="appName"></span></p>
+
+    <p>cookieEnabled: <span id="cookieEnabled"></span></p>
+</div>
+
+<div id="IE" style="display: none">
+
+    <p>platform: <span id="platform"></span></p>
+
+    <p>geolocation: <span id="geolocation"></span></p>
+</div>
+
+<script>
+    var navigatorInstanse = new Navigator();
+    navigatorInstanse.showData();
+</script>
+
+
+</body>
+</html>
