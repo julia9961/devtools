@@ -3690,15 +3690,16 @@
 <div id="coords"></div>
 <div id="scroll"></div>
 <script>
+    // на такие event как mousemove и scroll лучше ставить задержку (например _.debounce)
     document.body.addEventListener('mousemove', function(e){
-        for (var i = 0; i < 1000000; i ++) {i + 'a'}
+//        for (var i = 0; i < 1000000; i ++) {i + 'a'} лишний
         document.querySelector('#coords').style.width = document.body.offsetWidth / 20 + 'px';
         document.querySelector('#coords').innerHTML = 'x: ' + e.clientX + '; y:' + e.clientY;
         document.querySelector('#coords').style.height = document.body.offsetHeight / 100 + 'px';
     }, false);
 
     window.addEventListener('scroll', function(){
-        for (var i = 0; i < 1000000; i ++) {i + 'a'}
+//        for (var i = 0; i < 1000000; i ++) {i + 'a'} ничего не делает
         document.querySelector('#scroll').style.width = document.body.offsetWidth / 20 + 'px';
         document.querySelector('#scroll').innerHTML = 'scroll top: ' + document.body.scrollTop + 'px';
         document.querySelector('#scroll').style.height = document.body.offsetHeight / 100 + 'px';
